@@ -4,6 +4,6 @@ Lint JSON with [JsonLint](https://github.com/zaach/jsonlint).
 
 For example:
 
-    docker run -v $(pwd)/example:/app/code dcycle/json-lint ./code/json.json
+    docker run --rm -v $(pwd)/example:/app/code dcycle/json-lint ./code/json.json
 
 See [this project on the Docker Hub](https://hub.docker.com/r/dcycle/json-lint/).
