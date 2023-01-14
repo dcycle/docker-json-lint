@@ -1,5 +1,5 @@
 set -e
-docker pull node
+docker pull node:alpine
 docker pull dcycle/json-lint
 docker build -t local-dcycle-json-lint-image .
 
