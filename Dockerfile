@@ -1,8 +1,6 @@
-FROM node
+FROM node:alpine
 
-RUN mkdir -p /app/code
-
-RUN cd /app && npm install -g jsonlint
+RUN mkdir -p /app/code && cd /app && npm install -g jsonlint
 
 WORKDIR /app
 
