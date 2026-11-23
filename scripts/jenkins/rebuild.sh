@@ -15,7 +15,11 @@ fi
 # Create a droplet
 DROPLET_NAME=docker-json-lint
 
+<<<<<<< HEAD
 doctl compute droplet create "$DROPLET_NAME" --size 4gb --image ubuntu-24-04-x64 --ssh-keys "$DIGITALOCEAN_SSH_KEY"
+=======
+doctl compute droplet create "$DROPLET_NAME" --size 4gb --image ubuntu-20-04-x64 --ssh-keys "$DIGITALOCEAN_SSH_KEY"
+>>>>>>> upstream/master
 
 sleep 45
 
@@ -32,4 +36,8 @@ scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
 scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
   -r * root@"$IP":docker-json-lint-job
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+<<<<<<< HEAD
   root@"$IP" "cd docker-json-lint-job && ./scripts/install-docker-and-rebuild.sh"
+=======
+  root@"$IP" "cd docker-json-lint-job && ./scripts/install-docker-and-rebuild.sh"
+>>>>>>> upstream/master
